@@ -1,0 +1,147 @@
+body {
+    /* --цвет фона-- */
+    background-color: rgb(34, 34, 129);
+
+    margin:0;
+}
+
+.center-flex {/*--центровщик--*/
+    text-align: center;
+    margin-bottom: 8%;
+}
+.main_input {
+    /* -- расположение -- */
+    text-align: center;
+    /* - размер текста, цветовая схема - */
+    font-size: 115%;
+    color-scheme: light dark;
+}
+#converter_header {
+    color:aliceblue;
+}
+
+/* менюшка */
+#logo {
+    transition: 0.5s;
+    --logo-size: 21%;
+    width: var(--logo-size);
+    height: var(--logo-size);
+    float: left;
+}
+#logo:hover {
+    transition: 0.3s;
+
+    --logo-size: 21.5%;
+    width: var(--logo-size);
+    height: var(--logo-size);
+}
+#menu_bg {
+    background-color: rgb(91, 91, 236);
+    padding: 0.5%;
+    border-bottom: 1px solid rgb(82, 82, 172);
+}
+#menu {
+    list-style: none; 
+    margin: 0 auto;
+    display: flex;
+}
+#menu a {
+    transition: 0.5s;
+
+    padding: 1em;
+    --height-menu: 3.7%;
+    padding-top: var(--height-menu);
+    padding-bottom: var(--height-menu);
+
+    border-right: 1px solid rgb(111, 111, 216);
+    
+    font-size: 100%;
+    font: serif;
+    color:aliceblue;
+}
+#menu a:hover {
+    transition: 0.5s;
+
+    --height-menu: 2.5%;
+    padding-top: var(--height-menu);
+    padding-bottom: var(--height-menu);
+
+    font-size: 121%;
+    font-style: italic;
+}
+
+/* footer */
+#footer {
+    position:fixed;
+    width: 100%;
+    background-color: rgb(91, 91, 236);
+    text-align: center;
+    padding-top: 1%;
+    border-top: 1px solid rgb(60, 110, 202);
+    border-bottom: 1px solid rgb(60, 110, 202);
+    padding-bottom: 0.9%;
+}
+#links {
+    display: flex;
+    justify-content: center;
+}
+#links a {
+    transition: 0.3s;
+    padding: 1em; 
+    color: rgb(193, 204, 207);
+}
+#links a:hover {
+    transition: 0.3s;
+    font-size: 102%;
+    color: azure;
+    text-decoration: none;
+}
+
+
+/* для мобилок */
+@media (orientation: portrait) {
+    
+    #logo {
+        --logo-size: 40%; 
+        margin-left: 30%;  
+    }
+    #menu {
+        margin-top: 20%;
+        flex-wrap: wrap;
+    }
+    #menu a {
+        transition: 0.5s;
+    
+        font-size: 300%;
+
+        border-right: 2px solid aliceblue;
+    }
+    
+    .center-flex {/*--центровщик--*/
+        text-align: center;
+
+        margin-bottom: 30%;
+    }
+    .main_input {
+        /* -- расположение -- */
+        text-align: center;
+        /* - размер текста, цветовая схема - */
+        font-size: 500%;
+        color-scheme: light dark;
+    }
+    #converter_header {
+        color:aliceblue;
+        font-size: 350%;
+    }
+
+    #footer {
+        font-size: 290%;
+        position: absolute;
+    }
+    #links {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+}
